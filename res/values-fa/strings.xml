@@ -102,7 +102,7 @@
     <!-- Text to display when the actual text is inaccessible due to DRM protection -->
     <string name="drm_protected_text">"* متن محافظت‌شده توسط DRM *"</string>
     <!-- Error message to display when DRM rights are insufficient to access some data -->
-    <string name="insufficient_drm_rights">Insufficient DRM rights detected.</string>
+    <string name="insufficient_drm_rights">نقض متن محافظت‌شده توسط DRM پیدا شد.</string>
     <!-- Individual message context menu item -->
     <string name="copy_message_text">نسخه‌برداری از متن پیام</string>
     <!-- Header for context menu on an individual message -->
@@ -213,7 +213,7 @@
     <!-- Dialog message text indicating the message cannot be sent because there are no valid recipients -->
     <string name="cannot_send_message_reason">پیام شما هیچ گیرنده‌ای ندارد.</string>
     <!-- Error message displayed when the user attempts to forward a message with DRM-locked contents -->
-    <string name="cannot_forward_drm_obj">The DRM object included in the message cannot be forwarded.</string>
+    <string name="cannot_forward_drm_obj">شئ DRM دار در درون پیام را نمی‌توان فوروارد کرد..</string>
 
     <!-- Brief message that appears when converting a message from SMS to MMS. -->
     <string name="converting_to_picture_message">در حال تبدیل به پیام چندرسانه‌ای\u2026</string>
@@ -351,22 +351,20 @@
 
     <string name="pref_summary_notification_enabled">نمایش اطلاع‌های پیام در نوار وضعیت</string>
     <!-- Settings item for boolean option to vibrate during message notification -->
-    <string name="pref_title_notification_vibrate">لرزاننده</string>
-    <!-- Settings item description for boolean vibrate option -->
-    <string name="pref_summary_notification_vibrate">هنگام اطلاع‌رسانی هم بلرز</string>
+
     <!-- Settings item for entering ringtone selection screen -->
     <string name="pref_title_notification_ringtone">انتخاب صدای زنگ</string>
     <!-- Settings item for setting the number of message to save for each conversation -->
     <string name="pref_messages_to_save">تعداد پیام‌هایی که برای هر گفتگو ذخیره خواهد شد</string>
 
     <!-- Settings item for boolean option to auto-retrieve incoming MMS messages -->
-    <string name="pref_title_mms_auto_retrieval">Auto-retrieve</string>
+    <string name="pref_title_mms_auto_retrieval">دریافت خودکار</string>
     <!-- Settings item description for boolean MMS auto-retrieve option -->
-    <string name="pref_summary_mms_auto_retrieval">Automatically retrieve messages</string>
+    <string name="pref_summary_mms_auto_retrieval">پیام‌ها را به صورت خودکار دریافت کن</string>
     <!-- Settings item for boolean option to auto-retrieve incoming MMS messages while roaming -->
-    <string name="pref_title_mms_retrieval_during_roaming">Roaming auto-retrieve</string>
+    <string name="pref_title_mms_retrieval_during_roaming">دریافت خودکار در حالت رومینگ</string>
     <!-- Settings item description for boolean MMS auto-retrieve while roaming option -->
-    <string name="pref_summary_mms_retrieval_during_roaming">Automatically retrieve messages while roaming</string>
+    <string name="pref_summary_mms_retrieval_during_roaming">پیام‌ها را به صورت خودکار در حالت رومینگ دریافت کن</string>
 
     <!-- Label prepended to recipient's name in Undelivered Messages screen -->
     <string name="to_label">"به "</string>
@@ -695,6 +693,20 @@
     <!-- Toast message when a user tries to send a Mms message when there are already too many
          outstanding unsent message. -->
     <string name="too_many_unsent_mms">نمی‌توان در حال حاضر پیامی ارسال کرد. مقدار زیادی پیام چندرسانه‌ای ارسال‌نشده وجود دارد.</string>
-
+	<!-- Added By Behdad -->
+    <string name="pref_title_notification_vibrateWhen">لرزش</string>
+    <!-- Settings item description for boolean vibrate option -->
+    <string name="pref_summary_notification_vibrateWhen">همچنین هنگام دریافت اطلاع بلرز</string>
+    <!-- The vibrate notification modes -->
+    <string-array name="prefEntries_vibrateWhen">
+        <!-- Always -->
+        <item>همیشه</item>
+        <!-- Only when the phone is in Silent mode -->
+        <item>فقط در حالت بی‌صدا</item>
+        <!-- Never -->
+        <item>هیچوقت</item>
+    </string-array>
+    <!-- Dialog title for the Vibrate dialog -->
+    <string name="prefDialogTitle_vibrateWhen">لرزش</string>
 </resources>
 
