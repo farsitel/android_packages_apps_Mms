@@ -20,7 +20,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- The name of the SMS/MMS app as it appears to the user in the Home screen, task switcher, etc. -->
-    <string name="app_label">پیام‌رسان</string>
+    <string name="app_label">پیامک</string>
 
     <!-- Command name to open a Compose screen; displays in conversation list -->
     <string name="new_message">پیام جدید</string>
@@ -656,13 +656,13 @@
     <string name="select_contact_method_activity">انتخاب روش ارسال</string>
 
     <!-- Application name shown when searching -->
-    <string name="search_label">پیام‌رسان</string>
+    <string name="search_label">پیامک</string>
 
     <!-- Search hint -->
-    <string name="search_hint">جستجوی پیام‌رسان</string>
+    <string name="search_hint">جستجوی پیامک</string>
 
     <!-- Search activity name -->
-    <string name="search">جستجوی پیام‌رسان</string>
+    <string name="search">جستجوی پیامک</string>
 
     <!--  Search empty results -->
     <string name="search_empty">بدون تطبیق</string>
