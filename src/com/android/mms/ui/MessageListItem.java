@@ -133,7 +133,7 @@ public class MessageListItem extends LinearLayout implements
         final int indentLineCount = (int) ((effectiveBadgeHeight-1) / lineHeight) + 1;
 
         mLeadingMarginSpan = new LeadingMarginSpan.LeadingMarginSpan2() {
-            public void drawLeadingMargin(Canvas c, Paint p, int x,
+            public void drawLeadingMargin(Canvas c, Paint p, int x, int dir,
                     int top, int baseline, int bottom, CharSequence text,
                     int start, int end, boolean first, Layout layout) {
                 // no op
