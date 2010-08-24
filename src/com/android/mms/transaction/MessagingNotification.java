@@ -299,7 +299,7 @@ public class MessagingNotification {
             long msgId = cursor.getLong(COLUMN_MMS_ID);
             Uri msgUri = Mms.CONTENT_URI.buildUpon().appendPath(
                     Long.toString(msgId)).build();
-            String address = AddressUtils.getFrom(context, msgUri);
+            String address = String.format("%Ls", AddressUtils.getFrom(context, msgUri));
             String subject = getMmsSubject(
                     cursor.getString(COLUMN_SUBJECT), cursor.getInt(COLUMN_SUBJECT_CS));
             long threadId = cursor.getLong(COLUMN_THREAD_ID);

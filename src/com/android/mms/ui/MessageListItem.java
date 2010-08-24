@@ -359,7 +359,7 @@ public class MessageListItem extends LinearLayout implements
         CharSequence template = mContext.getResources().getText(R.string.name_colon);
         SpannableStringBuilder buf =
             new SpannableStringBuilder(TextUtils.replace(template,
-                new String[] { "%s" },
+                new String[] { "%Ls" },
                 new CharSequence[] { contact }));
 
         boolean hasSubject = !TextUtils.isEmpty(subject);

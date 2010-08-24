@@ -124,12 +124,12 @@ public class ConversationListItem extends RelativeLayout implements Contact.Upda
     private CharSequence formatMessage(ConversationListItemData ch) {
         final int size = android.R.style.TextAppearance_Small;
         final int color = android.R.styleable.Theme_textColorSecondary;
-        String from = ch.getFrom();
+        String from = String.format("%Ls", ch.getFrom());
 
         SpannableStringBuilder buf = new SpannableStringBuilder(from);
 
         if (ch.getMessageCount() > 1) {
-            buf.append(" (" + ch.getMessageCount() + ") ");
+            buf.append(String.format(" (%Ld) ", ch.getMessageCount()));
         }
 
         int before = buf.length();

@@ -27,15 +27,15 @@
     <!-- Summary text under "New Message" command; displays in conversation list -->
     <string name="create_new_message">ارسال پیام جدید</string>
     <!-- Context menu item on an individual message for dialing the sender's phone number -->
-    <string name="menu_call_back">تماس با <xliff:g id="name">%s</xliff:g></string>
+    <string name="menu_call_back">تماس با <xliff:g id="name">%Ls</xliff:g></string>
     <!-- Context menu item on an individual message for emailing the sender -->
-    <string name="menu_send_email">ارسال پست الکترونیکی به <xliff:g id="name">%s</xliff:g></string>
+    <string name="menu_send_email">ارسال پست الکترونیکی به <xliff:g id="name">%Ls</xliff:g></string>
 
     <!-- Menu item for starting a new conversation -->
     <string name="menu_compose_new">ارسال</string>
     <!-- Menu item for accessing application settings -->
     <string name="menu_preferences">تنظیمات</string>
-    <string name="menu_add_address_to_contacts">افزودن <xliff:g id="name">%s</xliff:g> به آشنایان</string>
+    <string name="menu_add_address_to_contacts">افزودن <xliff:g id="name">%Ls</xliff:g> به آشنایان</string>
     <!-- Menu item to call the recipient of the conversation on the phone (imperative verb) -->
     <string name="menu_call">تماس</string>
     <!-- Menu item for deleting all conversations -->
@@ -54,7 +54,7 @@
     <string name="has_draft">پیش‌نویس</string>
 
     <!-- Appearance of message sender in multi-recipient messages, e.g. "me to Megan" -->
-    <string name="broadcast_from_to"><xliff:g id="sender" example="me">%1$s</xliff:g> به <xliff:g id="recipient" example="Megan">%2$s</xliff:g></string>
+    <string name="broadcast_from_to"><xliff:g id="sender" example="me">%1$Ls</xliff:g> به <xliff:g id="recipient" example="Megan">%2$Ls</xliff:g></string>
     <!-- Name to use when we have an unspecified sender -->
     <string name="anonymous_recipient">ناشناس</string>
     <!-- Subject to display in the conversation list if there is no subject -->
@@ -73,16 +73,16 @@
     <!-- Context menu item on an individual message for deleting only that message -->
     <string name="delete_message">حذف پیام</string>
     <!-- Time and date a message was sent -->
-    <string name="sent_on">"ارسال‌شده <xliff:g id="date">%s</xliff:g>"</string>
+    <string name="sent_on">"ارسال‌شده <xliff:g id="date">%Ls</xliff:g>"</string>
     <!-- Time and date a message is due to expire -->
-    <string name="expire_on">"انقضا: <xliff:g id="date">%s</xliff:g>"</string>
+    <string name="expire_on">"انقضا: <xliff:g id="date">%Ls</xliff:g>"</string>
     <!-- Abbreviation for "kilobyte" -->
     <string name="kilobyte">کیلوبایت</string>
 
     <!-- Dialog box title brought up when warning the user that a message could not be delivered -->
     <string name="undelivered_msg_dialog_title">پیام نرسیده</string>
     <!-- Dialog box message indicating that a message could not be delivered, including the time of last attempt -->
-    <string name="undelivered_msg_dialog_body">نمی‌توان این پیام را ارسال کرد.\nتعداد دفعات تلاش: <xliff:g id="message">%s</xliff:g>.</string>
+    <string name="undelivered_msg_dialog_body">نمی‌توان این پیام را ارسال کرد.\nتعداد دفعات تلاش: <xliff:g id="message">%Ls</xliff:g>.</string>
     <!-- Dialog box message indicating that a message could not be delivered -->
     <string name="undelivered_sms_dialog_body">نمی‌توان این پیام را ارسال کرد.</string>
     <!-- Menu item for deleting the entire conversation currently being viewed -->
@@ -96,9 +96,9 @@
          indicating that the download is in progress -->
     <string name="downloading">در حال بارگیری</string>
     <!-- Formatting for prepending MMS message text with sender's name. -->
-    <string name="name_colon"><b><xliff:g id="name" example="Me">%s</xliff:g></b>": "</string>
+    <string name="name_colon"><b><xliff:g id="name" example="Me">%Ls</xliff:g></b>": "</string>
     <!-- Formatting for subject displayed inline, prepended to MMS message text -->
-    <string name="inline_subject">"&lt;موضوع: <xliff:g id="subject">%s</xliff:g>&gt;"</string>
+    <string name="inline_subject">"&lt;موضوع: <xliff:g id="subject">%Ls</xliff:g>&gt;"</string>
     <!-- Text to display when the actual text is inaccessible due to DRM protection -->
     <string name="drm_protected_text">"* متن محافظت‌شده توسط DRM *"</string>
     <!-- Error message to display when DRM rights are insufficient to access some data -->
@@ -124,7 +124,7 @@
     <!-- Menu item in slideshow edit screen for discarding the entire slideshow -->
     <string name="discard_slideshow">دورانداختن نمایشگر لغزنده</string>
     <!-- Header of slideshow showing which slide is being displayed -->
-    <string name="slide_show_part">بخش <xliff:g id="part">%1$s</xliff:g>/<xliff:g id="total">%2$s</xliff:g></string>
+    <string name="slide_show_part">بخش <xliff:g id="part">%1$Ls</xliff:g>/<xliff:g id="total">%2$Ls</xliff:g></string>
 
 
     <!-- Menu item in slide edit screen for removing the text from the slide being edited -->
@@ -183,15 +183,15 @@
     <string name="compressing">تصویر بزرگ است. در حال فشرده‌سازی\u2026</string>
 
     <!-- Error message indicating the format for the specified media type (e.g. "picture") is unsupported -->
-    <string name="unsupported_media_format">قالب <xliff:g id="name">%1$s</xliff:g> پشتیبانی نمی‌شود</string>
+    <string name="unsupported_media_format">قالب <xliff:g id="name">%1$Ls</xliff:g> پشتیبانی نمی‌شود</string>
     <!-- Message prompting the user to select a different item; item string as type-appropriate (e.g. "picture") -->
-    <string name="select_different_media">لطفا یک <xliff:g id="name">%1$s</xliff:g> دیگر انتخاب کنید.</string>
+    <string name="select_different_media">لطفا یک <xliff:g id="name">%1$Ls</xliff:g> دیگر انتخاب کنید.</string>
     <!-- Message indicating that the message size limit has been reached -->
     <string name="exceed_message_size_limitation">اندازهٔ پیام به حداکثر خود رسید.</string>
     <!-- Message indicating that the message is too big and there is no space to attach a video -->
     <string name="message_too_big_for_video">این پیام برای ضمیمه‌کردن یک ویدئو، بزرگ است.</string>
     <!-- Error message indicating that the item trying to be attached could not be added -->
-    <string name="failed_to_add_media">متاسفانه، نمی‌توانید <xliff:g id="name">%1$s</xliff:g> را به پیام‌تان بیافزایید.</string>
+    <string name="failed_to_add_media">متاسفانه، نمی‌توانید <xliff:g id="name">%1$Ls</xliff:g> را به پیام‌تان بیافزایید.</string>
     <!-- Error message indicating that the picture being attached and resized could not be resized -->
     <string name="failed_to_resize_image">اندازهٔ تصویر تغییر نکرد.</string>
     <!-- Error message indicating that an image being attached is still too large to send even after resize -->
@@ -203,7 +203,7 @@
     <!-- Dialog message text explaining that a draft message will not be saved due to invalid recipients -->
     <string name="discard_message_reason">پیام شما به دلیل اینکه هیچ گیرندهٔ معتبری ندارد، دور انداخته شد.</string>
     <!-- Dialog box title indicating which recipients are invalid when the user tries to send a message with invalid recipients -->
-    <string name="has_invalid_recipient">گیرنده(های) نامعتبر: &lt;<xliff:g id="name">%1$s</xliff:g>&gt;</string>
+    <string name="has_invalid_recipient">گیرنده(های) نامعتبر: &lt;<xliff:g id="name">%1$Ls</xliff:g>&gt;</string>
     <!-- While sending a message, if it has invalid recipient, display this message. -->
     <string name="invalid_destination">شما یک نشانی نامعتبر وارد کردید.</string>
     <!-- Dialog message text when the user tries to send a message with invalid recipients -->
@@ -231,10 +231,10 @@
     <!-- Brief message that appears when an attempt is made to delete a locked message -->
     <string name="locked_message_cannot_be_deleted">پیام قفل‌شده را نمی‌توان حذف کرد.</string>
     <!-- Brief message that appears when too many recipients have been added -->
-    <string name="too_many_recipients">این پیام، گیرنده‌های بسیار زیادی دارد (<xliff:g id="currentCount">%1$s</xliff:g>). تعداد <xliff:g id="maxLimit">%2$s</xliff:g> گیرنده، حد تعداد گیرنده‌هاست.</string>
+    <string name="too_many_recipients">این پیام، گیرنده‌های بسیار زیادی دارد (<xliff:g id="currentCount">%1$Ls</xliff:g>). تعداد <xliff:g id="maxLimit">%2$Ls</xliff:g> گیرنده، حد تعداد گیرنده‌هاست.</string>
 
     <!-- Titlebar string when there are more than one recipients -->
-    <string name="multiple_recipients"><xliff:g id="recipientCount">%1$s</xliff:g> گیرنده</string>
+    <string name="multiple_recipients"><xliff:g id="recipientCount">%1$Ls</xliff:g> گیرنده</string>
 
     <!-- Error message indicating that an audio attachment cannot be played -->
     <string name="cannot_play_audio">نمی‌توان صدا را پخش کرد.</string>
@@ -246,7 +246,7 @@
     <!-- Button in the slide editor screen used to replace the attached picture -->
     <string name="replace_image">جایگزینی تصویر</string>
     <!-- String for slide duration in seconds -->
-    <string name="duration_sec">مدت‌زمان (<xliff:g id="duration">%s</xliff:g> ثانیه)</string>
+    <string name="duration_sec">مدت‌زمان (<xliff:g id="duration">%Ls</xliff:g> ثانیه)</string>
     <!-- Dialog box title for duration selector -->
     <string name="duration_selector_title">"مدت‌زمان لغزنده "</string>
     <!-- Dialog box title for slide layout selector -->
@@ -330,7 +330,7 @@
     <!-- Settings item description for boolean auto-delete messages setting -->
     <string name="pref_summary_auto_delete">هنگام رسیدن به حد موردنظر، پیام‌های قدیمی‌تر را حذف کن</string>
     <!-- Settings item description for integer auto-delete sms message limit -->
-    <string name="pref_summary_delete_limit"><xliff:g id="count">%1$s</xliff:g> پیام در هر گفتگو</string>
+    <string name="pref_summary_delete_limit"><xliff:g id="count">%1$Ls</xliff:g> پیام در هر گفتگو</string>
     <!-- Settings item for entering SIM card message screen -->
     <string name="pref_title_manage_sim_messages">مدیریت پیام‌های سیم‌کارت</string>
     <!-- Settings item for boolean option to enable/disable MMS delivery reports -->
@@ -443,7 +443,7 @@
         the SIM card. -->
    <string name="menu_delete_messages">حذف پیام‌ها</string>
    <!-- Dialog text displayed when trying to resend an unsent message. -->
-   <string name="retrying_dialog_body">این پیام <xliff:g id="message">%s</xliff:g> به دلیل مشکلاتی در اتصال، ارسال نشد.\r\nدر حال تلاش مجدد برای ارسال\u2026</string>
+   <string name="retrying_dialog_body">این پیام <xliff:g id="message">%Ls</xliff:g> به دلیل مشکلاتی در اتصال، ارسال نشد.\r\nدر حال تلاش مجدد برای ارسال\u2026</string>
    <!-- Menu title for locking a message -->
    <string name="menu_lock">قفل‌کردن پیام</string>
    <!-- Menu title for unlocking a message -->
@@ -507,15 +507,15 @@
     <string name="select_top_text">متن بالایی</string>
 
     <!-- Delivery Report Toast dialog content -->
-    <string name="delivery_toast_body">پیام به %s تحویل داده شد</string>
+    <string name="delivery_toast_body">پیام به %Ls تحویل داده شد</string>
 
     <!-- Delivery Report Notification dialog title. -->
-    <string name="notification_multiple"><xliff:g id="count">%s</xliff:g> پیام خوانده‌نشده.</string>
+    <string name="notification_multiple"><xliff:g id="count">%Ls</xliff:g> پیام خوانده‌نشده.</string>
     <!-- Delivery Report Notification dialog title. -->
     <string name="notification_multiple_title">پیام‌های جدید</string>
 
     <!-- Failed to send/download Notification dialog title. -->
-    <string name="notification_failed_multiple"><xliff:g id="count">%s</xliff:g> پیام‌ها نمی‌توانند ارسال شوند.</string>
+    <string name="notification_failed_multiple"><xliff:g id="count">%Ls</xliff:g> پیام‌ها نمی‌توانند ارسال شوند.</string>
     <!-- Failed to send/download Notification dialog title. -->
     <string name="notification_failed_multiple_title">پیام‌ها ارسال نشدند</string>
 
@@ -562,7 +562,7 @@
     <string name="unknown_sender">ارسال‌کنندهٔ نامعلوم</string>
     <!-- When an error occurs downloading a new message, display this message.
          An example: Download of message Wanna get pizza from dorkman was unsuccessful. -->
-    <string name="dl_failure_notification">بارگیری پیام <xliff:g id="subject">%s</xliff:g> از <xliff:g id="from">%s</xliff:g> ناموفق بود.</string>
+    <string name="dl_failure_notification">بارگیری پیام <xliff:g id="subject">%Ls</xliff:g> از <xliff:g id="from">%Ls</xliff:g> ناموفق بود.</string>
 
     <!-- While downloading a message, if that message has expired, display this message. -->
     <string name="dl_expired_notification">این پیام منقضی شده است و حذف خواهد شد.</string>
@@ -605,15 +605,15 @@
     <string name="select_link_title">انتخاب عمل</string>
 
     <!-- Name of the Nth slide, shown in the list in the slideshow editor. -->
-    <string name="slide_number">لغزندهٔ <xliff:g id="number" example="5">%s</xliff:g></string>
+    <string name="slide_number">لغزندهٔ <xliff:g id="number" example="5">%Ls</xliff:g></string>
     <!-- Duration of the slide, shown in the list in the slideshow editor -->
     <plurals name="slide_duration">
         <!-- Case of 1-second duration. -->
-        <item quantity="one"><xliff:g id="number" example="1">%s</xliff:g> ثانیه</item>
+        <item quantity="one"><xliff:g id="number" example="1">%Ls</xliff:g> ثانیه</item>
         <!-- Case of "few" (small number of) seconds of duration. -->
-        <item quantity="few"><xliff:g id="number" example="2">%s</xliff:g> ثانیه</item>
+        <item quantity="few"><xliff:g id="number" example="2">%Ls</xliff:g> ثانیه</item>
         <!-- Case of multiple-second duration. -->
-        <item quantity="other"><xliff:g id="number" example="15">%s</xliff:g> ثانیه</item>
+        <item quantity="other"><xliff:g id="number" example="15">%Ls</xliff:g> ثانیه</item>
     </plurals>
 
     <!-- Title of the delivery report activity. -->
@@ -670,9 +670,9 @@
     <!--  Search results title -->
     <plurals name="search_results_title">
         <!-- Case of 1 result. -->
-        <item quantity="one"><xliff:g id="number" example="1">%s</xliff:g> نتیجه برای \"%s\"</item>
+        <item quantity="one"><xliff:g id="number" example="1">%Ls</xliff:g> نتیجه برای \"%Ls\"</item>
         <!-- Case of 0 or 2 or more results. -->
-        <item quantity="other"><xliff:g id="number" example="15">%s</xliff:g> نتیجه برای \"%s\"</item>
+        <item quantity="other"><xliff:g id="number" example="15">%Ls</xliff:g> نتیجه برای \"%Ls\"</item>
     </plurals>
 
     <!-- Dialog text for display mode save dialog. -->

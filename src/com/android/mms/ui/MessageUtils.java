@@ -161,7 +161,7 @@ public class MessageUtils {
         details.append(res.getString(R.string.multimedia_notification));
 
         // From: ***
-        String from = extractEncStr(context, nInd.getFrom());
+        String from = String.format("%Ls", extractEncStr(context, nInd.getFrom()));
         details.append('\n');
         details.append(res.getString(R.string.from_label));
         details.append(!TextUtils.isEmpty(from)? from:
@@ -225,7 +225,7 @@ public class MessageUtils {
 
         if (msg instanceof RetrieveConf) {
             // From: ***
-            String from = extractEncStr(context, ((RetrieveConf) msg).getFrom());
+            String from = String.format("%Ls", extractEncStr(context, ((RetrieveConf) msg).getFrom()));
             details.append('\n');
             details.append(res.getString(R.string.from_label));
             details.append(!TextUtils.isEmpty(from)? from:
