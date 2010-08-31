@@ -366,9 +366,6 @@
     <!-- Settings item description for boolean MMS auto-retrieve while roaming option -->
     <string name="pref_summary_mms_retrieval_during_roaming">پیام‌ها را به صورت خودکار در حالت رومینگ دریافت کن</string>
 
-    <!-- Label prepended to recipient's name in Undelivered Messages screen -->
-    <string name="to_label">"به "</string>
-
     <!-- Confirm Delete -->
     <!-- Delete confirmation dialog title -->
     <string name="confirm_dialog_title">حذف</string>

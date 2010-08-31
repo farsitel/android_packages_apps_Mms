@@ -373,7 +373,7 @@ public class SlideEditorActivity extends Activity {
         // Slide duration
         String duration = getResources().getString(R.string.duration_sec);
         menu.add(0, MENU_DURATION, 0,
-                duration.replace("%s", String.valueOf(slide.getDuration() / 1000))).setIcon(
+                String.format(duration, String.valueOf(slide.getDuration() / 1000))).setIcon(
                         R.drawable.ic_menu_duration);
 
         // Slide layout

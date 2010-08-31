@@ -24,5 +24,5 @@
     android:hint="@string/to_hint"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:inputType="textFilter"
+    android:inputType="textFilter|localizedDigits"
     />

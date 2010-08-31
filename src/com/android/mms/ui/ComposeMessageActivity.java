@@ -796,8 +796,8 @@ public class ComposeMessageActivity extends Activity
             }
             boolean addToContacts = false;
             if ("mailto".equalsIgnoreCase(prefix))  {
-                String sendEmailString = getString(
-                        R.string.menu_send_email).replace("%s", uriString);
+                String sendEmailString = String.format(getString(
+                        R.string.menu_send_email), uriString);
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("mailto:" + uriString));
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
@@ -806,8 +806,8 @@ public class ComposeMessageActivity extends Activity
                     .setIntent(intent);
                 addToContacts = !haveEmailContact(uriString);
             } else if ("tel".equalsIgnoreCase(prefix)) {
-                String callBackString = getString(
-                        R.string.menu_call_back).replace("%s", uriString);
+                String callBackString = String.format(getString(
+                        R.string.menu_call_back), uriString);
                 Intent intent = new Intent(Intent.ACTION_CALL,
                         Uri.parse("tel:" + uriString));
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
@@ -818,8 +818,8 @@ public class ComposeMessageActivity extends Activity
             }
             if (addToContacts) {
                 Intent intent = ConversationList.createAddContactIntent(uriString);
-                String addContactString = getString(
-                        R.string.menu_add_address_to_contacts).replace("%s", uriString);
+                String addContactString = String.format(getString(
+                        R.string.menu_add_address_to_contacts), uriString);
                 menu.add(0, MENU_ADD_ADDRESS_TO_CONTACTS, 0, addContactString)
                     .setOnMenuItemClickListener(l)
                     .setIntent(intent);
