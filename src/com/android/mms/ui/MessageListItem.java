@@ -41,6 +41,7 @@ import android.provider.Telephony.MmsSms;
 import android.provider.Telephony.Sms;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.TelephonyManager;
+import android.text.FriBidi;
 import android.text.Html;
 import android.text.Layout;
 import android.text.Spannable;
@@ -356,11 +357,29 @@ public class MessageListItem extends LinearLayout implements
     private CharSequence formatMessage(MessageItem msgItem, String contact, String body,
                                        String subject, String timestamp, Pattern highlight,
                                        String contentType) {
+        SpannableStringBuilder buf = new SpannableStringBuilder();
+
+        CharSequence parsedBody = null;
+        if (!TextUtils.isEmpty(body)) {
+            // Converts html to spannable if ContentType is "text/html".
+            if (contentType != null && ContentType.TEXT_HTML.equals(contentType)) {
+                parsedBody = Html.fromHtml(body);
+            } else {
+                SmileyParser parser = SmileyParser.getInstance();
+                parsedBody = parser.addSmileySpans(body);
+            }
+        }
+
+        FriBidi fribidiBody = new FriBidi(parsedBody);
+        if (fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_LTR ||
+            fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WLTR)
+            buf.append("\u200e");
+        else if (fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_RTL ||
+                 fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WRTL)
+            buf.append("\u200f");
+
         CharSequence template = mContext.getResources().getText(R.string.name_colon);
-        SpannableStringBuilder buf =
-            new SpannableStringBuilder(TextUtils.replace(template,
-                new String[] { "%Ls" },
-                new CharSequence[] { contact }));
+        buf.append(TextUtils.replace(template, new String[] { "%Ls" }, new CharSequence[] { contact }));
 
         boolean hasSubject = !TextUtils.isEmpty(subject);
         if (hasSubject) {
@@ -371,13 +390,12 @@ public class MessageListItem extends LinearLayout implements
             // Converts html to spannable if ContentType is "text/html".
             if (contentType != null && ContentType.TEXT_HTML.equals(contentType)) {
                 buf.append("\n");
-                buf.append(Html.fromHtml(body));
+                buf.append(parsedBody);
             } else {
                 if (hasSubject) {
                     buf.append(" - ");
                 }
-                SmileyParser parser = SmileyParser.getInstance();
-                buf.append(parser.addSmileySpans(body));
+                buf.append(parsedBody);
             }
         }
         // If we're in the process of sending a message (i.e. pending), then we show a "Sending..."
