@@ -26,6 +26,7 @@ import android.provider.ContactsContract.CommonDataKinds.Email;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.provider.Telephony.Mms;
 import android.telephony.PhoneNumberUtils;
+import android.text.format.Jalali;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -155,11 +156,11 @@ public class Contact {
         //                   (408) 555-1289
         String formattedNumber = number;
         if (!Mms.isEmailAddress(number)) {
-            formattedNumber = PhoneNumberUtils.formatNumber(number);
+            formattedNumber = String.format("%Ls", PhoneNumberUtils.formatNumber(number));
         }
 
         if (!TextUtils.isEmpty(name) && !name.equals(number)) {
-            return name + " <" + formattedNumber + ">";
+            return name + " \u200e<" + formattedNumber + ">\u200e";
         } else {
             return formattedNumber;
         }
@@ -577,7 +578,7 @@ public class Contact {
                     PHONES_WITH_PRESENCE_URI,
                     CALLER_ID_PROJECTION,
                     selection,
-                    new String[] { number },
+                    new String[] { Jalali.replacePersianDigits(number) },
                     null);
 
             if (cursor == null) {

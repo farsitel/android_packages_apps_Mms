@@ -379,7 +379,7 @@ public class MessageListItem extends LinearLayout implements
             buf.append("\u200f");
 
         CharSequence template = mContext.getResources().getText(R.string.name_colon);
-        buf.append(TextUtils.replace(template, new String[] { "%Ls" }, new CharSequence[] { contact }));
+        buf.append(TextUtils.replace(template, new String[] { "%s" }, new CharSequence[] { contact }));
 
         boolean hasSubject = !TextUtils.isEmpty(subject);
         if (hasSubject) {
