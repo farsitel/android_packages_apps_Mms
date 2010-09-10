@@ -381,6 +381,13 @@ public class MessageListItem extends LinearLayout implements
         CharSequence template = mContext.getResources().getText(R.string.name_colon);
         buf.append(TextUtils.replace(template, new String[] { "%s" }, new CharSequence[] { contact }));
 
+        if (fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_LTR ||
+            fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WLTR)
+            buf.append("\u200e");
+        else if (fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_RTL ||
+                 fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WRTL)
+            buf.append("\u200f");
+
         boolean hasSubject = !TextUtils.isEmpty(subject);
         if (hasSubject) {
             buf.append(mContext.getResources().getString(R.string.inline_subject, subject));
