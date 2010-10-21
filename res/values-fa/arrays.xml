@@ -43,22 +43,22 @@
          to the array DEFAULT_SMILEY_RES_IDS in MessageListItem.java and to default_smiley_texts
          above. -->
     <string-array name="default_smiley_names">
-        <item>خوشحال</item>
-        <item>ناراحت</item>
-        <item>چشمک</item>
-        <item>زبان‌درازی</item>
-        <item>شگفت‌زده</item>
-        <item>بوسه</item>
-        <item>فریاد</item>
-        <item>باحال</item>
-        <item>پول</item>
-        <item>عصبانی</item>
-        <item>خجالت‌زده</item>
-        <item>فرشته</item>
-        <item>دودل</item>
-        <item>گریه</item>
-        <item>ساکت</item>
-        <item>خنده</item>
-        <item>گیج</item>
+        <item>خوشحال</item>                   <!-- 0: :-) -->
+        <item>ناراحت</item>                     <!-- 1: :-( -->
+        <item>چشمک</item>                 <!-- 2: ;-) -->
+        <item>زبان‌درازی</item>     <!-- 3: :-P -->
+        <item>متعجب</item>               <!-- 4: =-O -->
+        <item>بوسه</item>                 <!-- 5: :-* -->
+        <item>فریاد</item>                 <!-- 6: :O -->
+        <item>باحال</item>                    <!-- 7: B-) -->
+        <item>پول</item>             <!-- 8: :-$ -->
+        <item>عصبانی</item>           <!-- 9: :-! -->
+        <item>خجالت‌زده</item>             <!-- 10: :-[ -->
+        <item>فرشته</item>                   <!-- 11: O:-) -->
+        <item>مردد</item>               <!-- 12: :-\\ -->
+        <item>گریه</item>                  <!-- 13: :\'( -->
+        <item>ساکت</item>         <!-- 14: :-X -->
+        <item>خنده</item>                <!-- 15: :-D -->
+        <item>گیج</item>                <!-- 16: o_O -->
     </string-array>
 </resources>
