@@ -96,9 +96,9 @@
          indicating that the download is in progress -->
     <string name="downloading">در حال دریافت</string>
     <!-- Formatting for prepending MMS message text with sender's name. -->
-    <string name="name_colon"><b><xliff:g id="name" example="Me">‏%Ls</xliff:g></b>: </string>
+    <string name="name_colon"><b><xliff:g id="name" example="Me">‏%s</xliff:g></b>: </string>
     <!-- Formatting for subject displayed inline, prepended to MMS message text -->
-    <string name="inline_subject">‏&lt;موضوع: <xliff:g id="subject">%Ls</xliff:g>&gt;</string>
+    <string name="inline_subject">‏&lt;موضوع: <xliff:g id="subject">%s</xliff:g>&gt;</string>
     <!-- Text to display when the actual text is inaccessible due to DRM protection -->
     <string name="drm_protected_text">‏* متن تحت حفاظت DRM *</string>
     <!-- Error message to display when DRM rights are insufficient to access some data -->
@@ -374,20 +374,6 @@
         <item>تنها در حالت بی‌صدا</item>
         <!-- Never -->
         <item>هرگز</item>
-    </string-array>
-
-    <!-- The default vibrateWhen value, when none is set -->
-    <string translatable="false" name="prefDefault_vibrateWhen">never</string>
-    <!-- The value to use when migrating from old versions for a true vibrate setting -->
-    <string translatable="false" name="prefDefault_vibrate_true">always</string>
-    <!-- The value to use when migrating from old versions for a false vibrate setting -->
-    <string translatable="false" name="prefDefault_vibrate_false">never</string>
-
-    <!-- The vibrateWhen values -->
-    <string-array translatable="false" name="prefValues_vibrateWhen">
-        <item>always</item>
-        <item>silent</item>
-        <item>never</item>
     </string-array>
 
     <!-- Dialog title for the Vibrate dialog -->
