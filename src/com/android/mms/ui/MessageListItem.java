@@ -63,6 +63,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.QuickContactBadge;
 import android.widget.TextView;
 
@@ -371,12 +372,32 @@ public class MessageListItem extends LinearLayout implements
         }
 
         FriBidi fribidiBody = new FriBidi(parsedBody);
+        LinearLayout statusIcons = (LinearLayout) findViewById(R.id.status_icons);
+        int paddingLeft = statusIcons.getPaddingLeft();
+        int paddingTop = statusIcons.getPaddingTop();
+        int paddingRight = statusIcons.getPaddingRight();
+        int paddingBottom = statusIcons.getPaddingBottom();
+        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams)statusIcons.getLayoutParams();
+        ViewGroup.MarginLayoutParams badgeParams = (MarginLayoutParams)mAvatar.getLayoutParams();
+        int badgeWidth = badgeParams.width + badgeParams.rightMargin + badgeParams.leftMargin;
         if (fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_LTR ||
-            fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WLTR)
+            fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WLTR) {
             buf.append("\u200e");
-        else if (fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_RTL ||
-                 fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WRTL)
+            if (mRTL) {
+                statusIcons.setPadding(paddingLeft, paddingTop, paddingRight + badgeWidth, paddingBottom);
+            }
+            lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
+            lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, 0);
+        } else if (fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_RTL ||
+                 fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WRTL) {
             buf.append("\u200f");
+            if (!mRTL) {
+                statusIcons.setPadding(paddingLeft + badgeWidth, paddingTop, paddingRight, paddingBottom);
+            }
+            lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, 0);
+            lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
+        }
+        statusIcons.setLayoutParams(lp);
 
         CharSequence template = mContext.getResources().getText(R.string.name_colon);
         buf.append(TextUtils.replace(template, new String[] { "%s" }, new CharSequence[] { contact }));
