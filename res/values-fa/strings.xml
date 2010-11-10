@@ -25,14 +25,14 @@
     <!-- Command name to open a Compose screen; displays in conversation list -->
     <string name="new_message">پیامک جدید</string>
     <!-- Summary text under "New Message" command; displays in conversation list -->
-    <string name="create_new_message">ساختن پیامک جدید</string>
+    <string name="create_new_message"> </string>
     <!-- Context menu item on an individual message for dialing the sender's phone number -->
     <string name="menu_call_back">تماس با <xliff:g id="name">%Ls</xliff:g></string>
     <!-- Context menu item on an individual message for emailing the sender -->
     <string name="menu_send_email">ارسال نامه به <xliff:g id="name">%Ls</xliff:g></string>
 
     <!-- Menu item for starting a new conversation -->
-    <string name="menu_compose_new">ساختن</string>
+    <string name="menu_compose_new">پیامک جدید</string>
     <!-- Menu item for accessing application settings -->
     <string name="menu_preferences">تنظیمات</string>
     <string name="menu_add_address_to_contacts">افزودن <xliff:g id="name">%Ls</xliff:g> به آشنایان</string>
@@ -73,7 +73,7 @@
     <!-- Context menu item on an individual message for deleting only that message -->
     <string name="delete_message">حذف پیامک</string>
     <!-- Time and date a message was sent -->
-    <string name="sent_on">‏زمان ارسال: <xliff:g id="date">%Ls</xliff:g></string>
+    <string name="sent_on">‏<xliff:g id="date">%Ls</xliff:g></string>
     <!-- Time and date a message is due to expire -->
     <string name="expire_on">‏زمان انقضاء: <xliff:g id="date">%Ls</xliff:g></string>
     <!-- Abbreviation for "kilobyte" -->
@@ -118,9 +118,9 @@
     <!-- Menu item in slideshow edit screen for removing the selected slide from the slideshow -->
     <string name="remove_slide">حذف اسلاید</string>
     <!-- Menu item in slideshow edit screen for adding a new slide to the slideshow -->
-    <string name="add_slide">افزودن اسلاید</string>
+    <string name="add_slide">اسلاید جدید</string>
     <!-- Text displayed below "Add slide" item in slideshow edit screen -->
-    <string name="add_slide_hint">برای ایجاد اسلاید جدید انتخاب کنید.</string>
+    <string name="add_slide_hint"> </string>
     <!-- Menu item in slideshow edit screen for discarding the entire slideshow -->
     <string name="discard_slideshow">دور انداختن اسلایدها</string>
     <!-- Header of slideshow showing which slide is being displayed -->
@@ -150,7 +150,7 @@
     <string name="subject_hint">موضوع</string>
 
     <!-- Menu item in conversation screen for attaching something to the message being composed -->
-    <string name="add_attachment">ضمیمه کردن</string>
+    <string name="add_attachment">ضمیمه شود</string>
     <!-- Menu item in conversation screen for adding a subject to the message being composed -->
     <string name="add_subject">افزودن موضوع</string>
     <!-- Menu item in conversation screen for discarding the message currently being composed -->
@@ -174,7 +174,7 @@
     <!-- Hint text in message body field when keyboard is exposed -->
     <string name="type_to_compose_text_enter_to_send">اینجا بنویسید</string>
     <!-- Hint text in message body field when keyboard is hidden -->
-    <string name="open_keyboard_to_compose_message">باز کردن صفحه‌کلید برای نوشتن پیامک</string>
+    <string name="open_keyboard_to_compose_message">برای نوشتن پیامک صفحه‌کلید را باز کنید.</string>
 
     <!-- Dialog title for warning the user that the picture they are trying to attach is too large -->
     <string name="image_too_large">تصویرِ بسیار حجیم</string>
@@ -201,15 +201,15 @@
     <!-- String prepended to forwarded messages to indicate they were forwarded -->
     <string name="forward_prefix">Fwd:\u0020</string>
     <!-- Dialog box title that appears when a draft message will not be saved due to invalid recipients -->
-    <string name="discard_message">دور انداختن</string>
+    <string name="discard_message">دور انداخته می‌شود!</string>
     <!-- Dialog message text explaining that a draft message will not be saved due to invalid recipients -->
-    <string name="discard_message_reason">پیامک شما، به دلیل اینکه گیرندهٔ معتبری ندارد، دور انداخته می‌شود.</string>
+    <string name="discard_message_reason">پیامک شما گیرندهٔ معتبری ندارد. دور انداخته شود؟</string>
     <!-- Dialog box title indicating which recipients are invalid when the user tries to send a message with invalid recipients -->
-    <string name="has_invalid_recipient">گیرنده(ها)ی نامعتبر: &lt;<xliff:g id="name">%1$Ls</xliff:g>&gt;</string>
+    <string name="has_invalid_recipient">گیرنده نامعتبر: &lt;<xliff:g id="name">%1$Ls</xliff:g>&gt;</string>
     <!-- While sending a message, if it has invalid recipient, display this message. -->
     <string name="invalid_destination">نشانی نامعتبری را وارد کرده‌اید.</string>
     <!-- Dialog message text when the user tries to send a message with invalid recipients -->
-    <string name="invalid_recipient_message">گیرنده(ها) را اصلاح کنید. در غیر این صورت پیامک به درستی ارسال نخواهد شد.</string>
+    <string name="invalid_recipient_message">گیرنده را اصلاح کنید. در غیر این صورت پیامک به گیرندگان نامعتبر ارسال نخواهد شد. ارسال شود؟</string>
     <!-- Dialog box title indicating the message cannot be sent because there are no valid recipients -->
     <string name="cannot_send_message">پیامک را نمی‌توان ارسال کرد.</string>
     <!-- Dialog message text indicating the message cannot be sent because there are no valid recipients -->
@@ -402,7 +402,7 @@
     <!-- Delete message confirmation dialog message -->
     <string name="confirm_delete_message">پیامک حذف شود؟</string>
     <!-- Delete message confirmation dialog message for a locked message -->
-    <string name="confirm_delete_locked_message">این پیامک قفل‌شده حذف شود؟</string>
+    <string name="confirm_delete_locked_message">این پیامک قفل‌شده، حذف شود؟</string>
     <!-- Delete entire thread confirmation dialog message -->
     <string name="confirm_delete_all_messages">تمام گفتگو حذف شود؟</string>
     <!-- Delete all the messages on the SIM dialog message -->
@@ -452,7 +452,7 @@
     <!-- "Priority" value in "Message details" dialog -->
     <string name="priority_low">پایین</string>
     <!-- Label in "Message details" dialog -->
-    <string name="message_class_label">ردهٔ پیامک:\u0020</string>
+    <string name="message_class_label">ردهٔ پیام:\u0020</string>
     <!-- Label in "Message details" dialog -->
     <string name="error_code_label">کد خطا:\u0020</string>
 
@@ -548,7 +548,7 @@
     <string name="sim_full_body">برای خالی کردن حافظه، تعدادی از پیامک‌ها را حذف کنید.</string>
 
     <!-- Device Full Notification dialog title. -->
-    <string name="sms_full_title">حافظهٔ پر شده است.</string>
+    <string name="sms_full_title">حافظه پر شده است.</string>
     <!-- Device Full Notification dialog text. -->
     <string name="sms_full_body">پیامک ورودی به دلیل پر بودن حافظه رد شد. تعدادی از پیامک‌های قدیمی را حذف کنید.</string>
 
