@@ -384,7 +384,7 @@ public class MessageListItem extends LinearLayout implements
             fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WLTR) {
             buf.append("\u200e");
             if (mRTL) {
-                statusIcons.setPadding(paddingLeft, paddingTop, paddingRight + badgeWidth, paddingBottom);
+                statusIcons.setPadding(0, 0, badgeWidth, 0);
             }
             lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
             lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, 0);
@@ -392,7 +392,7 @@ public class MessageListItem extends LinearLayout implements
                  fribidiBody.direction == FriBidi.PARAGRAPH_DIRECTION_WRTL) {
             buf.append("\u200f");
             if (!mRTL) {
-                statusIcons.setPadding(paddingLeft + badgeWidth, paddingTop, paddingRight, paddingBottom);
+                statusIcons.setPadding(badgeWidth, 0, 0, 0);
             }
             lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, 0);
             lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
