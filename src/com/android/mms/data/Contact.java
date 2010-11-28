@@ -162,7 +162,7 @@ public class Contact {
         if (!TextUtils.isEmpty(name) && !name.equals(number)) {
             return name + " \u200e<" + formattedNumber + ">\u200e";
         } else {
-            return formattedNumber;
+            return "\u200e" + formattedNumber;
         }
     }
 
@@ -172,7 +172,7 @@ public class Contact {
     }
 
     public synchronized String getNumber() {
-        return mNumber;
+        return String.format("%Ls", mNumber);
     }
 
     public synchronized void setNumber(String number) {
@@ -191,7 +191,11 @@ public class Contact {
 
     public synchronized String getName() {
         if (TextUtils.isEmpty(mName)) {
-            return mNumber;
+            String formattedNumber = mNumber;
+            if (!Mms.isEmailAddress(mNumber)) {
+                formattedNumber = String.format("\u200e%Ls\u200e", PhoneNumberUtils.formatNumber(mNumber));
+            }
+            return formattedNumber;
         } else {
             return mName;
         }
