@@ -67,7 +67,7 @@ public class ContactList extends ArrayList<Contact>  {
         String[] names = new String[size()];
         int i = 0;
         for (Contact c : this) {
-            names[i++] = c.getName();
+            names[i++] = c.getLocalizedName();
         }
         return TextUtils.join(separator, names);
     }

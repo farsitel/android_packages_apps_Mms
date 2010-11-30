@@ -619,7 +619,7 @@ public class ComposeMessageActivity extends Activity
                 Contact c = ((RecipientContextMenuInfo) menuInfo).recipient;
                 RecipientsMenuClickListener l = new RecipientsMenuClickListener(c);
 
-                menu.setHeaderTitle(c.getName());
+                menu.setHeaderTitle(c.getLocalizedName());
 
                 if (c.existsInDatabase()) {
                     menu.add(0, MENU_VIEW_CONTACT, 0, R.string.menu_view_contact)

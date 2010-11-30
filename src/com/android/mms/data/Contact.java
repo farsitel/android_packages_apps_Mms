@@ -172,7 +172,7 @@ public class Contact {
     }
 
     public synchronized String getNumber() {
-        return String.format("%Ls", mNumber);
+        return mNumber;
     }
 
     public synchronized void setNumber(String number) {
@@ -193,7 +193,19 @@ public class Contact {
         if (TextUtils.isEmpty(mName)) {
             String formattedNumber = mNumber;
             if (!Mms.isEmailAddress(mNumber)) {
-                formattedNumber = String.format("\u200e%Ls\u200e", PhoneNumberUtils.formatNumber(mNumber));
+                formattedNumber = PhoneNumberUtils.formatNumber(mNumber);
+            }
+            return formattedNumber;
+        } else {
+            return mName;
+        }
+    }
+
+    public synchronized String getLocalizedName() {
+        if (TextUtils.isEmpty(mName)) {
+            String formattedNumber = mNumber;
+            if (!Mms.isEmailAddress(mNumber)) {
+                formattedNumber = String.format("\u200e%Ls", PhoneNumberUtils.formatNumber(mNumber));
             }
             return formattedNumber;
         } else {
