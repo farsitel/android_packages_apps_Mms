@@ -530,7 +530,7 @@
     <string name="select_top_text">متن در بالا</string>
 
     <!-- Delivery Report Toast dialog content -->
-    <string name="delivery_toast_body">پیامک توسط %Ls دریافت شد.</string>
+    <string name="delivery_toast_body">پیامک به %Ls رسید.</string>
 
     <!-- Delivery Report Notification dialog title. -->
     <string name="notification_multiple"><xliff:g id="count">‏%Ls</xliff:g> پیامک نخوانده</string>
