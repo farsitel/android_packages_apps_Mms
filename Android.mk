@@ -14,7 +14,7 @@ LOCAL_PACKAGE_NAME := Mms
 
 LOCAL_STATIC_JAVA_LIBRARIES += android-common
 
-LOCAL_REQUIRED_MODULES := SoundRecorder
+#LOCAL_REQUIRED_MODULES := SoundRecorder
 
 LOCAL_PROGUARD_FLAGS := -include $(LOCAL_PATH)/proguard.flags
 
